@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <title>前端笔记</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      font-family: Arial, sans-serif;
+    }
+
+    .gallery {
+      width: 910px;
+      margin: 40px auto;
+      column-count: 1;
+      /* 3 列瀑布流 */
+      column-gap: 18px;
+    }
+
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 18px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      /* 保持原始比例 */
+      display: block;
+      border-radius: 10px;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    /* 目录图更大：占两列宽度 */
+    .cover {
+      width: 100%;
+      display: inline-block;
+    }
+
+    .text {
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="gallery">
+    <div class="gallery-item text">
+      由于GitHub仓库为PRIVATE, 没有加入组织则无法访问, 因此这里给出笔记目录的贴图
+    </div>
+    <!-- 第一张：目录图 -->
+    <div class="gallery-item cover">
+      <img src="./assets/index.png" alt="目录">
+    </div>
+
+    <!-- 其他五张 -->
+    <div class="gallery-item"><img src="./assets/js.png" alt=""></div>
+    <div class="gallery-item"><img src="./assets/css.png" alt=""></div>
+    <div class="gallery-item"><img src="./assets/webgl.png" alt=""></div>
+    <div class="gallery-item"><img src="./assets/data.jpg" alt=""></div>
+    <div class="gallery-item"><img src="./assets/design.png" alt=""></div>
+  </div>
+
+</body>
+
+</html>
